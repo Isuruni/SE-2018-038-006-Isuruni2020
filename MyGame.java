@@ -13,8 +13,8 @@ public class MyGame {
         System.out.println("monster");
         System.out.println(150);
 
-        worrior01.setAge(monster.age);
-        System.out.println();
+        worrior01.setAge(worrior01.age);
+        System.out.println("Now the age of monster is " + worrior01.setAge(worrior01.age));
 
         worrior01.walking();
         worrior02.walking();
@@ -36,9 +36,10 @@ class Worrior{
         this.age = age;
         this.stick = true;
     }
-
-    void setAge(int age){
+    int setAge(int age){
         this.age=age;
+        return this.age;
+
     }
 
         void walking() {
@@ -64,9 +65,11 @@ class Worrior{
 
         void stealing(Worrior worrior) {
 
+
             worrior.stick=false;
             System.out.println(this.name + " has stolen " + worrior.name + "'s walking stick.");
 
 
         }
     }
+
